@@ -1,0 +1,44 @@
+.loginform {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    font-family: 'Montserrat', sans-serif;
+    justify-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .inputbox {
+    width: 70%;
+    border-radius: 3px;
+    height: 30px;
+    font-size: 16px;
+    margin-top: 7px;
+  }
+  
+  .btnlogin {
+    padding: 12px;
+    min-width: 180px;
+    background-color: black;
+    color: whitesmoke;
+    cursor: pointer;
+    border: 1px solid black;
+    font-family: 'Montserrat', sans-serif;
+
+  }
+
+  .btnlogin:hover {
+    background-color: grey;
+    border: 1px solid grey;
+  }
+
+  .inputdiv {
+    margin-bottom: 10px;
+  }
+
+  .labelbox {
+    margin-bottom: 20px;
+  }
+
+  .seccion {
+    margin: 0 30px;
+  } 
+

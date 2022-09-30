@@ -1,38 +1,28 @@
-<nav class="navbar navbar-expand-sm bg-light">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="/">Home</a>
+
+
+<div class="header">
+    <a href="/" class="logo">CompanyLogo</a>
+ <div class="header-right">
+   
         </li>
         {{#if user}}
-        <li class="nav-item">
-          <a class="nav-link" href="users/logout">Logout</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="secret">Secret</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Config
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/users/settings">Account Settings</a></li>
-            <li><a class="dropdown-item" href="/users/validate">Validate Email</a></li>
-          </ul>
-        </li>
+    
+    <a href="sesion"><i class="fa fa-fw fa-user"></i> Session</a>
+    <a href="users/logout"><i class="fa fa-fw fa-user"></i> Logout</a>
+        <a href="/users/settings"><i class="fa fa-fw fa-user"></i> Account Settings</a>
+                <a href="/users/validate"><i class="fa fa-fw fa-user"></i> Validate Email</a>
+
+
+
+   
+
+        
         {{else}}
-        <li class="nav-item">
-          <a class="nav-link" href="/users/login">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/users/register">Register</a>
-        </li>
+
+        <a href="/users/login"><i class="fa fa-fw fa-user"></i> Login</a>
+    <a href="/users/register"><i class="fa fa-fw fa-user"></i> Register</a>
+    </div>
+
         {{/if}}
       </ul>
     </div>

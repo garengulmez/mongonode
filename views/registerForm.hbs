@@ -4,6 +4,10 @@
       <div class="mb-3">
         <label for="name" class="form-label">Name</label>
         <input name="name" type="text" class="form-control" id="name" autocomplete="name" autofocus>
+          {{#each arrWarnings}}
+        <p>{{msg}}</p>
+    {{/each}}
+
       </div>
       <div class="mb-3">
         <label for="lastName" class="form-label">Lastname</label>
@@ -36,4 +40,7 @@
       </div>
   </div>
   </form>
+    {{#each arrWarnings}}
+        <p>{{msg}}</p>
+    {{/each}}
 </div>

@@ -27,15 +27,16 @@ app.get("/", (req, res) => {
   res.render("home", { user: req.session.user });
 });
 
-app.get("/secret", auth, (req, res) => {
-  res.render("secret", { user: `${req.session.user.name} ${req.session.user.lastName}`, id: req.session.user.id })
+
+app.use("/users", require("./routes/usersRt"))
+
+app.get("/sesion", auth, (req, res) => {
+  res.render("sesion", { user: `${req.session.user.name} ${req.session.user.lastName}`, id: req.session.user.id })
 })
 
 app.get("/noauth", (req, res) => {
   res.render("noAuth")
 })
-
-app.use("/users", require("./routes/usersRt"))
 
 
 
