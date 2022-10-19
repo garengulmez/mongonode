@@ -1,0 +1,185 @@
+footer {
+    background-color: bisque;
+    display: grid;
+    /* grid-template-columns: 25% 25% 25%;
+    grid-template-rows: 38vh 5vh; */
+    grid-template-areas: 
+    
+    "logo"
+    "links"
+    "social"
+    "categories"
+
+    ;
+
+    justify-content: space-evenly;
+    font-family: 'Montserrat', sans-serif;
+    padding: 60px;
+
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .pageLinks {
+    display: flex;
+    column-gap: 25px;
+    padding: 20px;
+    font-size: 25px;
+    justify-content: center;
+  }
+
+  .pageLinks a {
+   text-decoration: none;
+   color: black;
+    font-weight: bold;
+  }
+
+  .pageLinks a:hover {
+    color: brown;
+   }
+
+   .otherLinks {
+    display: flex;
+    column-gap: 25px;
+    padding: 20px;
+    font-size: 14px;
+    justify-content: center;
+
+   }
+
+   .otherLinks a {
+    text-decoration: none;
+   color: black;
+   }
+
+   .otherLinks a:hover {
+    color: brown;
+
+   }
+
+  .links {
+    grid-area: links;
+
+  }
+
+  .social {
+    grid-area: social;
+  }
+
+  .categories {
+    grid-area: categories;
+  }
+
+
+  .col1, .col2, .col3 {
+    padding: 20px;
+  }
+
+  .col2 a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .col2 ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .col2 li {
+    margin-bottom: 10px;
+  }
+
+  .col2 a:hover {
+    color:brown
+  }
+
+  .socialLinks {
+    display: flex;
+    list-style: none;
+    padding:0;
+  }
+
+  .socialLinks-item {
+    margin-right: 16px;
+    font-size: 25px;
+  }
+
+  .socialLinks-item a {
+    color: black;
+  }
+
+  .socialLinks-item a:hover {
+    color: brown;
+  }
+
+
+  .col3 ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.col3 li {
+    margin-bottom: 10px;
+     }
+
+.col3 a {
+    text-decoration: none;
+    color: black;
+      }
+
+.col3 a:hover {
+        color:brown
+      }
+
+.copyright {
+    background-color: #B02A25;
+    color: white;
+    padding: 20px;
+    text-align: center;
+     }
+
+.copyright p {
+    margin: 0;
+}
+
+@media only screen and (max-width: 768px) { 
+    footer {
+        grid-template-areas: 
+    
+        "logo"
+        "links"
+        "social"
+        "categories"
+        ;
+padding: 30px;
+      }
+
+      .pageLinks {
+        column-gap: 18px;
+    padding: 20px;
+    font-size: 15px;
+      }
+
+      .socialLinks {
+        padding-bottom:20px;
+      }
+      .col1, .col2, .col3 {
+        display: flex;
+        padding: 5px;
+      }
+      .col1 {
+        justify-content: center;
+        column-gap: 30px;
+        align-self: center;
+        margin-top: 40px;
+      }
+      .col2, .col3 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+    

@@ -1,16 +1,19 @@
 
 
 <div class="header">
-    <a href="/" class="logo">CompanyLogo</a>
+  <a class="logo" href="/">
+   <img src="/images/Whiskey-Wash-Logo-White.png" width="150px" alt="">
+  </a>
+ 
+    {{!-- <a href="/" class="logo">CompanyLogo</a> --}}
  <div class="header-right">
    
-        </li>
         {{#if user}}
     
-    <a href="sesion"><i class="fa fa-fw fa-user"></i> Session</a>
-    <a href="users/logout"><i class="fa fa-fw fa-user"></i> Logout</a>
+    {{!-- <a href="/users/sesion"><i class="fa fa-fw fa-user"></i> Login</a> --}}
         <a href="/users/settings"><i class="fa fa-fw fa-user"></i> Account Settings</a>
-                <a href="/users/validate"><i class="fa fa-fw fa-user"></i> Validate Email</a>
+            <a href="users/logout"><i class="fa fa-fw fa-user"></i> Logout</a>
+
 
 
 
@@ -24,7 +27,6 @@
     </div>
 
         {{/if}}
-      </ul>
     </div>
   </div>
 </nav>

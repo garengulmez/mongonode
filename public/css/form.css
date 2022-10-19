@@ -3,7 +3,13 @@
     grid-template-columns: 50% 50%;
     font-family: 'Montserrat', sans-serif;
     justify-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .mainTitle {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
   }
 
   .inputbox {
@@ -15,19 +21,51 @@
   }
   
   .btnlogin {
-    padding: 12px;
+    padding: 16px;
     min-width: 180px;
+    height: 50px;
     background-color: black;
     color: whitesmoke;
     cursor: pointer;
     border: 1px solid black;
     font-family: 'Montserrat', sans-serif;
-
+    text-decoration: none;
+    margin: 15px 0;
+    font-size: 17px;
   }
 
   .btnlogin:hover {
     background-color: grey;
     border: 1px solid grey;
+  }
+
+  .btnConfirm {
+    padding: 12px;
+    background-color: #5B8035;
+    color: white;
+    cursor: pointer;
+    border: 1px solid #5B8035;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    border-radius: 2px;
+
+  }
+
+  .btnConfirm:hover {
+    background-color: #7AA053;
+    border: 1px solid #7AA053;
+  }
+
+  .btnDelete {
+    padding: 12px;
+    padding: 12px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    border: 1px solid red;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    border-radius: 2px;
   }
 
   .inputdiv {
@@ -40,5 +78,60 @@
 
   .seccion {
     margin: 0 30px;
-  } 
+  }
+
+  .registerInput {
+      width: 300px;
+      border-radius: 3px;
+      height: 30px;
+      font-size: 16px;
+      margin-top: 7px;
+    }
+
+  .sectionRegister {
+    display: flex;
+    margin: 30px;
+    font-family: 'Montserrat', sans-serif;
+    justify-content:center ;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bodyRegister { 
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+  }
+
+  .btnbackLogin {
+    text-decoration: none;
+    padding: 16px;
+    height: 50px;
+    color: black;
+    background-color: #C2B926;
+    margin: 30px 0;
+    font-size: 16px;
+  }
+
+  .btnbackLogin:hover {
+    background-color: #9B931E;
+  }
+
+  .bodyAccount {
+    padding: 40px 80px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+
+  @media only screen and (max-width: 768px) { 
+    .loginform {
+      grid-template-columns: 100%;
+    }
+
+    .seccion {
+      margin-bottom:50px;
+    }
+  }
+
+
+
 

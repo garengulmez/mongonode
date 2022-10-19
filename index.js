@@ -34,8 +34,8 @@ app.get("/sesion", auth, (req, res) => {
   res.render("sesion", { user: `${req.session.user.name} ${req.session.user.lastName}`, id: req.session.user.id })
 })
 
-app.get("/noauth", (req, res) => {
-  res.render("noAuth")
+app.get("/restricted", (req, res) => {
+  res.render("restricted")
 })
 
 

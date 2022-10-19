@@ -7,16 +7,119 @@ body {
   background-color: white;
 }
 
-footer {
-  background-color: bisque;
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-  grid-template-rows: 20vh 10vh;
-
-}
-
 .banner {
   min-height: 180px;
   background-color: black;
   color: white;
+  padding-bottom: 50px;
 }
+
+.products {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.products a:link {
+    text-decoration: none;
+}
+
+.hide {
+  display: none;
+}
+
+.card {
+  
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 20px 20px 50px 20px;
+  max-width: 200px;
+  max-height: 350px;
+  border-radius: 7px;
+  color: black;
+
+}
+
+.card:hover + .hide {
+  display: block;
+  color: red;
+}
+
+.card img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.card p {
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  text-decoration: none;
+}
+
+.card:hover {
+  text-decoration: underline;
+}
+
+.restricted {
+  padding: 40px 80px;
+  font-family: 'Merriweather', serif;
+}
+
+.btnbackHome {
+  padding: 17px;
+    background-color: black;
+    color: whitesmoke;
+    cursor: pointer;
+    border: 1px solid black;
+    font-family: 'Merriweather', serif;
+    text-decoration: none;
+}
+
+.btnbackHome:hover {
+  background-color: grey;
+}
+
+.videoIntro {
+  background-color: bisque ;
+  padding: 30px;
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  font-size: 30px;
+}
+
+.formError {
+  padding: 20px;
+  background-color: #F57FA1;
+}
+
+.btnCancel {
+  text-decoration: none;
+  padding: 12px;
+  border: 1px solid grey;
+}
+
+.videoIntro iframe {
+  width: 100%;
+  height: 400px;
+}
+
+@media only screen and (max-width: 768px) { 
+  .products {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    display: flex;
+    margin-bottom: 20px;
+    max-width: 200px;
+    max-height: 200px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+

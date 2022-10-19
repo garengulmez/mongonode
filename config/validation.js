@@ -2,27 +2,54 @@ const validations = require("express-validator");
 const { body, validationResult } = validations
 
 const rules = [
+
     body("name")
-    .notEmpty().withMessage("Nombre es un Campo obligatorio"),
+    .notEmpty()
+    .withMessage("Nombre es un campo obligatorio"),
+
     body("lastName")
-    .notEmpty().withMessage("Apellido es un Campo obligatorio"),
+    .notEmpty()
+    .withMessage("Apellido es un campo obligatorio"),
+
     body("email")
-    .notEmpty().withMessage("Email es un campo obligatorio")
-    .isEmail().withMessage("Ingresar un email válido"),
+    .notEmpty()
+    .withMessage("Email es un campo obligatorio")
+    .trim()
+    .isEmail()
+    .withMessage("El email tiene que ser válido")
+    .normalizeEmail()
+    .toLowerCase(),
+
+    body("pass")
+    .notEmpty()
+    .withMessage("Password es um campo obligatorio")
+    .trim()
+    .isLength({min:7, max:20})
+    .withMessage("El password tiene que tener un mínimo de 7 caracteres"),
+    
+
+    
+    
+   
 
 
 (req, res, next) => {
-/* Encontramos los errores de validación en la request y los
-envolvemos en un objeto con
-funciones muy útiles que también provee express-validator*/
+
+   
+
+
 const errors = validationResult(req);
 if (!errors.isEmpty()) {
-const formData = req.body;
 const arrWarnings = errors.array();
-console.log(arrWarnings);
 
-res.render("registerForm", { arrWarnings, formData });
-//aquí sigue el código de nuestro controlador POST
+console.log(arrWarnings);
+console.log(errors);
+
+
+
+
+
+res.render("registerForm", { arrWarnings });
 } else return next()
 }
 ]
